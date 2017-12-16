@@ -1,0 +1,148 @@
+/*
+* @Author: Lenovo
+* @Date:   2017-08-06 11:51:09
+* @Last Modified by:   Lenovo
+* @Last Modified time: 2017-08-07 22:24:02
+*/
+@import url('base.css');
+.beijing{
+	width: 100%;
+	/* height: 6.2rem; */
+	background: #F2F1F6;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.shangbu{
+	width: 100%;
+	height: 3.75rem;
+	/* background: blue; */
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+}
+#chahao{
+	display: block;
+	width: 0.16rem;
+	height: 0.16rem;
+	/* background: red; */
+	font-size: 0.16rem;
+	line-height: 0.16rem;
+	color: #8B8B8D;
+	position: absolute;
+	top: 0;
+	left: 0.13rem;
+}
+.touxiangyoughu{
+	width: 100%;
+	height: 2.42rem;
+	/* background: red; */
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: center;
+}
+.touxiang{
+	display: block;
+	width: 0.88rem;
+	height: 0.88rem;
+	/* background: blue; */
+	border-radius: 50%;
+}
+.tutouxiang{
+	display: block;
+	width: 0.88rem;
+	height: 0.88rem;
+	border-radius: 50%;
+}
+.sangeanniu{
+	width: 100%;
+	height: 1.35rem;
+	/* background: pink; */
+}
+.yonghuming{
+	display: block;
+	width: 100%;
+	height: 0.44rem;
+	/* background: blue; */
+	display: flex;
+	justify-content: flex-end;
+	border-bottom:0.01rem solid #EBECEE; 
+}
+#yonghumingicon{
+	width: 0.4rem;
+	height: 100%;
+	background: #fff;
+	font-size: 0.22rem;
+	color: #C6C6C6;
+	line-height: 0.44rem;
+}
+.yonghuming input{
+	width: 3.14rem;
+	height: 100%;
+	border: none;
+	outline: none;
+
+}
+.wangjimima{
+	width: 100%;
+	height: 0.39rem;
+	/* background: red; */
+	display: flex;
+	justify-content: flex-end;
+}
+.wangjimm{
+	width: 0.7rem;
+	height: 100%;
+    font-size: 0.12rem;
+    line-height: 0.39rem;
+    color: #898989;
+}
+.dengluzhuce{
+	width: 100%;
+	height: 0.96rem;
+	/* background: yellow; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.dengluanniu{
+	width: 3.28rem;
+	height: 0.48rem;
+	background: #44B0F7;
+	border-radius: 0.15rem;
+    font-size: 0.14rem;
+    line-height: 0.48rem;
+    text-align: center;
+    color: #fff;
+}
+.zhuceanniu{
+	width: 3.28rem;
+	height: 0.48rem;
+	border-radius: 0.15rem;
+    font-size: 0.14rem;
+    line-height: 0.48rem;
+    text-align: center;
+    color: #2E2E2E;
+}
+.xiabu{
+	display: block;
+	width: 100%;
+	height: 1.44rem;
+	/* background: blue; */
+}
+.qqanniu{
+	width: 100%;
+	height: 0.48rem;
+	/* background: red; */
+	font-size: 0.14rem;
+	color: #39393B;
+	line-height: 0.48rem;
+    text-align: center;
+}

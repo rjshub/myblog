@@ -1,0 +1,19 @@
+/*
+* @Author: Lenovo
+* @Date:   2017-08-02 10:10:37
+* @Last Modified by:   Lenovo
+* @Last Modified time: 2017-08-02 10:11:49
+*/
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+    font-family: "微软雅黑"，"宋体"，"sans-serif";
+}
+body{
+	background: #fff;
+}
+img{
+	border: 0;
+}

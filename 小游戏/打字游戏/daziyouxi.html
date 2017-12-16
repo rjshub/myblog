@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>打字游戏</title>
+	<script type="text/javascript" src="js/getEleFunction.js"></script>
+	<script type="text/javascript" src="js/typegame.js"></script>
+</head>
+<style type="text/css">
+	.scene{
+		width: 1000px;
+		height:100%;
+		background:url(images/beij.jpg) ;
+		position: absolute;
+		left: 50%;
+		margin-left: -500px;
+		top: 0;
+	}
+	.main{
+		width: 800px;
+		height: 100%;
+		float: left;
+		position: relative;
+		border: 5px solid #999;
+		overflow: hidden;
+		box-sizing:border-box;/*CSS3属性：内容区域自动减去边框所占大小*/
+	}
+	.control{
+		width:200px;
+		height: 100%;
+		background:url(images/beij.jpg) no-repeat 0 0;
+		float: left;	
+	}
+	.text{
+		width: 150px;
+		height: 40px;
+		margin: 30px auto;
+		background: #888;
+		border-radius: 15px;
+		text-align: center;
+		line-height: 40px;
+		font-size: 16px;
+		color: #fff;
+		/*box-shadow: 0 5px 5px #d0770a;*/
+	}
+	.show{
+		width: 60px;
+		height: 40px;
+		float: right;
+		text-align: left;
+		line-height: 40px;
+		font-size: 26px;
+		color: #fff;
+	}
+	.btn{
+		width: 150px;
+		height: 40px;
+		margin: 30px auto;
+		background: #333;
+		border-radius: 15px;
+		/*border: 2px solid red;*/
+		text-align: center;
+		line-height: 40px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #fff;
+		cursor: pointer;
+		/*box-shadow: 0 5px 5px #308c06;*/
+	}
+</style>
+<body>
+	<div class="scene">
+		<div class="main"></div>
+		<div class="control">
+			<div class="text">
+			得分：
+				<div class="score show">0</div>
+			</div>
+			<div class="text">
+			关卡：
+			<div class="state show">1</div>	
+			</div>
+			<div class="text">
+			生命值：
+				<div class="life show">3</div>
+			</div>
+			<div class="start btn" style="margin-top:200px;">开始</div>
+			<div class="stop btn">暂停</div>
+			<div class="end btn">结束</div>
+		</div>
+	</div>
+</body>
+</html>

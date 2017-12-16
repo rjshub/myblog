@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctr">
+<head>
+	<meta charset="UTF-8">
+	<title>提醒事项</title>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="hezi">
+	<div class="hzl">
+		<div class="hzl-top">
+			<div class="hzl-top-l"></div>
+			<input type="text" class="hzl-top-c" value="提醒事项">
+			<div class="hzl-top-r" ng-click="add()">+</div>
+		</div>
+		<div class="hzl-nr">
+			<div class="hzl-nr1">
+				<div class="hzl-nr1-l"></div>
+			    <div class="hzl-nr1-c">已计划</div>
+			</div>
+			<div class="hzl-nr2" ng-repeat="v in data" ng-click="select(v.id)" ng-style="{backgroundColor:v.id==index?'#000':''}">
+				<div class="hzl-nr2-l"><div class="yuan" ng-style="{background:v.color}"></div></div>
+			    <div class="hzl-nr2-c">{{v.title}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="hzr">
+		<div class="hzr-top">
+			<div class="hzr-top-l"></div>
+			<input type="text" class="hzr-top-c" value="搜索所有提醒">
+			<div class="hzr-top-r"></div>
+		</div>
+		<div class="hzr-nr">
+			<div class="hzr-nr">
+			    <div class="hzr-nr-l" ng-style="{color:data[index].color}">{{data[index].title}}</div>
+			    <div class="hzr-nr-r" ng-style="{color:data[index].color}" ng-click="dianji()">选项</div>
+			        <div class="xx" ng-show="flag">
+                    	<input type="text" ng-model="title" ng-style="{color:color}">
+                    	<div class="yslist">
+                    	<span>列表颜色</span>
+                    		<ul class="lbys">
+                    			<li ng-repeat="v in colors" ng-style="{backgroundColor:v,borderColor:v==color?color:''}" ng-click="huanys(v)"></li>
+                    		</ul>
+                    	</div>
+                    	<div class="di">
+                    		<span class="aa1" ng-click="del()">删除</span>
+                    		<span class="aa3" ng-click="wancheng()">完成</span>
+                    		<span class="aa2" ng-click="dianji()">取消</span>
+                    	</div>
+                    </div>
+		    </div>
+		    <div class="hzr-nr1" ng-click="xsyc()">已完成：{{(data[index].todo|filter:{done:true}).length}}项</div>
+		    <ul class="hzr-nr1-list" ng-show="flag1">
+		    	<li ng-repeat="v in data[index].todo|filter:{done:true}">
+		    	    <div class="hzr-nr2-l" ng-click="dqq(v)"><div class="yuan1" ng-style="{backgroundColor:data[index].color,borderColor:data[index].color}"></div></div>
+			        <div class="hzr-nr2-c" contenteditable="true" ng-blur="kbj(v,$event)">{{v.t}}</div>
+		    	</li>
+		    </ul>
+		    <div class="hzr-nr1" ng-click="xsyc1()">未完成：{{(data[index].todo|filter:{done:false}).length}}项</div>
+		    <ul class="hzr-nr1-list" ng-show="flag2">
+		    	<li ng-repeat="v in data[index].todo|filter:{done:false}">
+		    	    <div class="hzr-nr2-l" ng-click="dqq(v)"><div class="yuan1" ng-style="{backgroundColor:'#fff',borderColor:data[index].color}"></div></div>
+			        <div class="hzr-nr2-c" contenteditable="true" ng-blur="kbj(v,$event)">{{v.t}}</div>
+		    	</li>
+		    </ul>
+		    <div class="hzr-nr1" ng-click="xxm()">新项目…</div>
+		</div>
+	</div>	
+</div>
+<div class="zz" ng-show="flag" ng-click="dianji()"></div>
+</body>
+</html>

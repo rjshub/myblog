@@ -1,0 +1,256 @@
+body,ul,li,input{
+	border:0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+*{
+	text-decoration:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+html,body{
+	height:100%;
+}
+.hezi{
+	width: 100%;height: 100%;
+}
+.hzl{
+	width: 30%;height: 100%;
+	float:left;
+	overflow: auto;
+}
+.hzr{
+	width: 70%;height: 100%;
+	background-color: #f7f7f7;
+	float:left;
+	overflow: auto;
+}
+.hzl-top{
+	width: 100%;height: 40px;
+	background-color: #383836;
+}
+.hzl-top-l{
+	width: 20%;height: 40px;
+	background: url(../images/1.png) center center /cover;
+	float:left;
+}
+.hzl-top-c{
+	width: 70%;height: 40px;
+	line-height: 40px;
+	text-align: left;
+	color:#ccc;
+	text-indent: 20px;
+	float:left;
+	background-color: #383836;
+
+}
+.hzl-top-r{
+	width: 10%;height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color:#ccc;
+	float:left;
+	cursor: pointer;
+	font-size: 24px;
+}
+
+.hzl-nr{
+	width: 100%;height: 547px;
+	background-color: #383836;
+}
+.hzl-nr1{
+	width: 100%;height: 40px;
+	background-color: #383836;
+	box-sizing:border-box;
+	border-bottom: 1px solid #282826;
+}
+.hzl-nr1-l{
+	width: 10%;height: 39px;
+	background: url(../images/2.png) center center /cover;
+	float:left;
+}
+.hzl-nr1-c{
+	width: 70%;height: 40px;
+	line-height: 40px;
+	text-align: left;
+	color:#ccc;
+	text-indent: 20px;
+	float:left;
+}
+.hzl-nr2{
+	width: 100%;height: 40px;
+	background-color: #383836;
+	border-bottom: 1px solid #282826;
+}
+.hzl-nr2-l{
+	width: 10%;height: 40px;
+	float:left;
+	position: relative;
+}
+.hzl-nr2-c{
+	width: 70%;height: 40px;
+	line-height: 40px;
+	text-align: left;
+	color:#ccc;
+	text-indent: 20px;
+	float:left;
+}
+.yuan{
+	width: 50%;height: 50%;
+	border-radius:50%;
+	position: absolute;
+	left: 0;right:0;top:0;bottom:0;
+	margin:auto;
+}
+
+
+.hzr-top{
+	width: 100%;height: 40px;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #eee;
+}
+.hzr-top-l{
+	width: 5%;height: 40px;
+	background: url(../images/3.png) center center /cover;
+	float:left;
+}
+.hzr-top-c{
+	width: 70%;height: 40px;
+	line-height: 40px;
+	text-align: left;
+	color:#ccc;
+	text-indent: 20px;
+	float:left;
+	background-color: #f7f7f7;
+}
+.hzr-top-r{
+	width: 3%;height: 40px;
+	line-height: 40px;
+	margin-right: 2%;
+	text-align: center;
+	color:#ccc;
+	float:right;
+	background: url(../images/4.png) center center /cover;
+}
+.hzr-nr{
+	width: 100%;height: 80px;
+	border-bottom: 1px solid #eee;
+	float:left;
+}
+.hzr-nr-l{
+	height: 80px;
+	width: 50%;
+	float:left;
+	font-size: 40px;
+	line-height: 80px;
+    text-indent: 20px;
+}
+.hzr-nr-r{
+	height: 30px;
+	width: 10%;
+	float:right;
+	font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.hzr-nr1{
+	width: 90%;height: 40px;
+	border-bottom: 1px solid #eee;
+	float: right;
+	line-height: 40px;
+	text-indent: 10px;
+	color:#666;
+	cursor: pointer;
+}
+
+.hzr-nr1-list>li{
+	width: 90%;height: 40px;
+	border-bottom: 1px solid #eee;
+	float: right;
+	line-height: 40px;
+	text-indent: 10px;
+	color:#999;
+	position: relative;
+}
+
+.hzr-nr2-l{
+	width: 40px;height: 40px;
+	float:left;
+	position: relative;
+}
+.hzr-nr2-c{
+	width: 70%;height: 40px;
+	line-height: 40px;
+	text-align: left;
+	color:#ccc;
+	text-indent: 20px;
+	float:left;
+}
+
+.zz{
+	width: 100%;height: 100%;
+	background-color: rgba(0,0,0,0);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.xx{
+	width: 360px;height: 210px;
+	background-color: #fff;
+	position: absolute;
+	top:40px;right:100px;
+	padding: 20px;
+	z-index: 9999;
+}
+.xx>input{
+	border: 1px solid #eee;
+	width: 320px;height: 40px;
+	margin-bottom: 20px;
+}
+.lbys{
+	margin-top: 20px;
+	width: 320px;height: 60px;
+	margin-bottom: 20px;
+}
+.di{
+	width: 320px;height: 40px;
+	margin-bottom: 20px;
+}
+.di span{
+	display: inline-block;
+	width: 20%;height: 40px;
+	cursor: pointer;
+}
+.aa1{
+	color: red;
+	float: left;
+}
+.aa2{
+	color: blue;
+	float:right;
+	margin-right: 10px;
+}
+.aa3{
+	color: blue;
+	font-weight: 600;
+	float:right;
+}
+.lbys li{
+	float: left;
+	width:20px;height: 20px;
+	margin: 5px;
+	border-radius:50%;
+	background-clip: content-box;
+	border: 2px solid rgba(0,0,0,0);
+	padding: 4px; 
+}
+.yuan1{
+	width:20px;height: 20px;
+	border-radius:50%;
+	background-clip: content-box!important;
+	border: 2px solid rgba(0,0,0,1);
+	padding: 4px; 
+	margin-top: 5px;
+	margin-left: 10px;
+}

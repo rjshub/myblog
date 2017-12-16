@@ -1,0 +1,23 @@
+.margin(@h:0){margin: @h auto};
+.zfd{float:left };
+.yfd{float:right };
+.text(@num){line-height:@num;text-align:center};
+.response(@style,@i:1)when(@i<=@cols){
+  .col-@{style}-@{i}{
+    width: @i/ @cols*100%;
+    min-height:1px;
+    float:left;
+    position:relative;
+  }
+  .response(@style,@i+1)
+};
+@cols:12;
+@media screen and (min-width: 1068px){
+  .response(big)
+}
+@media screen and (min-width: 728px){
+  .response(md)
+}
+@media screen and (max-width: 728px){
+  .response(little)
+}

@@ -1,0 +1,205 @@
+/*header开始*/
+.header-nav{
+    height:0.88rem;
+    width: 100%;
+    background: #0084ff;
+
+}
+main{
+    height: 100%;
+    width: 95%;
+    /*background: red;*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.icon-zuo{
+    display: block;
+    height: 100%;
+    width: 12%;
+    /*background: red;*/
+    float: left;
+    font-size: 0.6rem;
+    line-height: 0.88rem;
+    text-align: center;
+    color: #fff;
+}
+.center-text{
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    /*float: left;*/
+    /*background: red;*/
+    font-size: 0.5rem;
+    line-height: 0.88rem;
+    text-align: center;
+    color: #fff;
+}
+.icon-16{
+    display: block;
+    height: 100%;
+    width: 12%;
+    /*background: red;*/
+    float: right;
+    font-size: 0.6rem;
+    line-height: 0.88rem;
+    text-align: center;
+    color: #fff;
+}
+
+/*headerjieshu*/
+
+/*02开始*/
+.neironglist02{
+    margin-top: 0.1rem;
+    display: block;
+    width:100%;
+    height: 4.5rem;
+    position: relative;
+}
+.neironglist02 img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.touxiang{
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    padding: 0.02rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -0.45rem;
+    bottom: 0.2rem;
+    background-color: #c0a16b;
+    background: url("../img/514eeaf8e726672ab63a54fc5eb79cd44ee9cf9e26e85-LwIX41_fw658.jpg") no-repeat center center;
+    background-size: cover;
+}
+.neironglist02-text{
+    width: 2rem;
+    /*height: 0.2rem;*/
+    position: absolute;
+    left: 50%;
+    margin-left: -1rem;
+    top: 1.5rem;
+    /*background: red;*/
+    color: #fff;
+    text-align: center;
+}
+.neironglist02-text p{
+    font-size: 0.4rem;
+    line-height: 0.4rem;
+    margin: 0;
+}
+.neironglist02-text span{
+    font-size: 0.4rem;
+    line-height: 0.4rem;
+    margin: 0;
+}
+
+/*中间开始*/
+.bottom-jiantou{
+    width: 0.6rem;
+    height: 1.2rem;
+    /*background: red;*/
+    margin-left: 0.3rem;
+    /*background: url("../img/t0181e55a7f78e20e9a.png") no-repeat center center;*/
+    /*background-size: cover;*/
+    font-size: 0.24rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #fff;
+}
+.bottom-jiantou img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*中间结束*/
+
+/*图片详情开始*/
+.tupianxiangqing{
+    width: 100%;
+    height: 4.5rem;
+    background: red;
+    position: relative;
+    margin-bottom: 0.2rem;
+}
+.tupianxiangqing img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.qitalianjie{
+    width: 2rem;
+    height: 0.6rem;
+    background: rgba(0,0,0,0.7);
+    border-radius: 0.3rem;
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0.2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.center{
+    width: 0.02rem;
+    height: 50%;
+    margin-top: 0.15rem;
+    background: #ccc;
+}
+.qitalianjie-left{
+    width: 0.7rem;
+    height: 100%;
+    padding: 0 0.15rem;
+    float: left;
+}
+.qitalianjie-left p,.qitalianjie-right p{
+    font-size: 0.26rem;
+    line-height: 0.6rem;
+    color: #fff;
+    float: left;
+}
+.qitalianjie-left p:nth-child(2),.qitalianjie-right p:nth-child(2){
+    float: right;
+}
+.qitalianjie-right{
+    width: 0.55rem;
+    height: 100%;
+    padding: 0 0.15rem;
+    float: right;
+}
+/*详情结束*/
+
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 90px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    /*background: #ccc;*/
+    overflow: hidden;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}

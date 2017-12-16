@@ -1,0 +1,228 @@
+.zfd {
+  float: left;
+}
+.yfd {
+  float: right;
+}
+@media screen and (min-width: 1068px) {
+  .col-big-1 {
+    width: 8.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-2 {
+    width: 16.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-3 {
+    width: 25%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-4 {
+    width: 33.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-5 {
+    width: 41.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-6 {
+    width: 50%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-7 {
+    width: 58.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-8 {
+    width: 66.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-9 {
+    width: 75%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-10 {
+    width: 83.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-11 {
+    width: 91.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-big-12 {
+    width: 100%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+}
+@media screen and (min-width: 728px) {
+  .col-md-1 {
+    width: 8.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-3 {
+    width: 25%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-5 {
+    width: 41.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-6 {
+    width: 50%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-9 {
+    width: 75%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-10 {
+    width: 83.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-11 {
+    width: 91.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-md-12 {
+    width: 100%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+}
+@media screen and (max-width: 728px) {
+  .col-little-1 {
+    width: 8.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-2 {
+    width: 16.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-3 {
+    width: 25%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-4 {
+    width: 33.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-5 {
+    width: 41.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-6 {
+    width: 50%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-7 {
+    width: 58.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-8 {
+    width: 66.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-9 {
+    width: 75%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-10 {
+    width: 83.33333333%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-11 {
+    width: 91.66666667%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+  .col-little-12 {
+    width: 100%;
+    min-height: 1px;
+    float: left;
+    position: relative;
+  }
+}

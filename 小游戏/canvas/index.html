@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,user-scalable=no">-->
+    <meta charset="UTF-8">
+    <title>画板</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    canvas{
+        border: 1px solid #000;
+        background: #9e9e9e;
+        background: url("8a8a.jpg") no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /*input{*/
+        /*margin-top: 5px;*/
+        /*width: 75px;*/
+        /*height: 30px;*/
+    /*}*/
+    main{
+        width: 1192px;
+        height: 600px;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid #0084ff;
+    }
+    button{
+        width: 82px;
+        height: 30px;
+        font-size: 12px;
+        z-index: 10;
+    }
+    .active{
+        border: 1px solid blue;
+    }
+    .gongjulan{
+        width: 170px;
+        height: 480px;
+        /*background: red;*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 60px 10px;
+        background: url("6790.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    .color{
+        width: 75px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -37px;
+    }
+    #n{
+        width: 70px;
+        height: 30px;
+    }
+    button:nth-child(2n+1){
+        margin-right: 15px;
+        /*margin-top: 5px;*/
+        margin: 10px auto;
+    }
+    button:nth-child(2n){
+
+    }
+</style>
+<body>
+<main>
+    <!--建立画板（宽高大小要在行内样式进行编辑）-->
+    <canvas width="1000"height="600"></canvas>
+<!--</main>-->
+<!--<main>-->
+    <!--建立颜色调色板-->
+    <div class="gongjulan">
+    <input type="color" class="color">
+    多边形边数：<input type="text" value="3" id="n">
+    <button type="button" id="drawline" class="active">画线</button>
+    <button type="button" id="drawStrokeRect">轮廓矩形</button>
+    <button type="button" id="drawFillRect">填充矩形</button>
+    <button type="button" id="drawStrokePoly">轮廓多边形</button>
+    <button type="button" id="drawFillPoly">填充多边形</button>
+    <button type="button" id="drawLinearRect">渐变矩形</button>
+    <button type="button" id="drawFillCircle">画填充圆</button>
+    <button type="button" id="drawStrokeCircle">画轮廓圆</button>
+    <button type="button" id="drawRadialCircle">画渐变圆</button>
+    <button type="button" id="drawFillText">画实心字</button>
+    <button type="button" id="drawStrokeText">画空心字</button>
+    <button class="shangyibu">上一步</button>
+    </div>
+</main>
+</body>
+<script>
+    var canvas=document.querySelector('canvas');
+    var paint=canvas.getContext('2d');     //启动绘画功能
+
+    //    paint.fillStyle='blue';
+    //    paint.fillRect(0,0,500,400);
+    //    paint.fillStyle='blue';
+    //    paint.beginPath();
+    //    paint.moveTo(10,10);
+    //    paint.lineTo(60,60);
+    //    paint.lineTo(50,30);
+    //    paint.closePath();
+    //    paint.stroke();
+    //    paint.fill();
+
+//    let linear=paint.createLinearGradient(0,0,canvas.width,canvas.height);
+//    linear.addColorStop(0,'red');
+//    linear.addColorStop(0.2,'blue');
+//    linear.addColorStop(0.4,'green');
+//    linear.addColorStop(1,'yellow');
+//    paint.fillStyle=linear;
+//    paint.fillRect(0,0,200,200);
+
+//     画圆
+//    paint.arc(100,100,100,0,2*Math.PI);
+//    paint.fillStyle='red';
+//    paint.fill();
+
+//        径向渐变
+//    let radial=paint.createRadialGradient(50,50,0,50,50,100);
+//    radial.addColorStop(0.8,'orange');
+//    radial.addColorStop(1,'purple');
+//    paint.beginPath();
+//    paint.arc(50,50,100,0,2*Math.PI);
+//    paint.fillStyle=radial;
+//    paint.fill();
+
+//    paint.fillText('中文',200,200);
+//    paint.font='40px 宋体';
+
+//    //浏览器加载缓存显示
+//                原始方式，由人设定时间
+//    var i=0;
+////    var t=0;
+//    function circle(){
+//        paint.clearRect(0,0,canvas.width,canvas.height);
+//        i++;
+//        paint.beginPath();
+//        paint.lineWidth=10;
+//        paint.arc(100,100,50,0,Math.PI*2/100*i);
+//        paint.stroke();
+//
+//        paint.font='20px 宋体';
+//        paint.textAlign='center';
+//        paint.textBaseline='middle';
+//        paint.lineWidth=1;
+//        paint.fillText(i+'%',100,100)
+//        if(i==100){
+//            clearInterval(t);
+//        }
+//    }
+//    var t=setInterval(circle,10)
+//    circle();
+
+//         缓存进度
+//       window.requestAnimationFrame浏览器自行刷新时间
+//    var i=0;
+//    function circle(){
+//        paint.clearRect(0,0,canvas.width,canvas.height);
+//        i++;
+//        paint.beginPath();
+//        paint.lineWidth=10;
+//        paint.arc(100,100,50,0,Math.PI*2/100*i);
+//        paint.stroke();
+//
+//        paint.font='20px 宋体';
+//        paint.textAlign='center';
+//        paint.textBaseline='middle';
+//        paint.lineWidth=1;
+//        paint.fillText(i+'%',100,100)
+//         var t=window.requestAnimationFrame(circle);
+//        if(i==100){
+//            window.cancelAnimationFrame(t);
+//        }
+//    }
+//    circle();
+
+
+    let colorbox=document.querySelector('input[type=color]');   //获取颜色盒子
+    let color;
+    colorbox.onchange=function(value){   //添加事件，是颜色可以有变化
+        color=this.value;       //获取 当前颜色
+    }
+    let arr=[];
+    let btn=document.querySelector('.shangyibu');
+    console.log(btn)
+    btn.onclick=function(){
+        console.log(1)
+        arr.pop();
+        if(arr.length>=1){
+            let imgdate=arr[arr.length-1];
+            paint.putImageData(imgdate,0,0);    //调用保存好的图像
+        }else{
+            alert('确定要清空吗');
+            paint.clearRect(0,0,canvas.width,canvas.height);
+            return;
+        }
+    }
+//    // 获取输入样式
+    var type='drawline';
+    let typebtn=document.querySelectorAll('button[id]');
+//    console.log(typebtn)
+    typebtn.forEach(function(value){
+        value.onclick=function(){
+            typebtn.forEach((value)=>{value.classList.remove('active')});
+            this.classList.add('active');
+            type=this.id;
+            return type;
+        }
+    })
+
+//      //编辑多边形的边数
+    var n=3;
+    var nobj=document.querySelector('#n');
+//    console.log(nobj)
+    nobj.onchange=function(value){
+        n=nobj.value;
+        console.log(n)
+    }
+    //    let img=paint.getImageData(0,0,canvas.width,canvas.height);    //保存画好的图像，此时为空
+    canvas.onmousedown=function(e) {      //添加画板鼠标移入事件
+        let ox = e.offsetX;       //获取点击位置的坐标信息，距离事件源
+        let oy = e.offsetY;
+        canvas.onmousemove = function (e) {      //添加鼠标移动事件
+            let nx = e.offsetX;      //获取移动后的位置信息
+            let ny = e.offsetY;
+            paint.clearRect(0, 0, canvas.width, canvas.height);    //清空画板，使只保留最后一次画好的图像
+            if (arr.length >= 1) {
+                let imgdate = arr[arr.length - 1];
+                paint.putImageData(imgdate, 0, 0);    //调用保存好的图像
+            }
+            if (type == 'drawline') {
+                paint.beginPath();
+                paint.moveTo(ox, oy);
+                paint.lineTo(nx, ny);
+                paint.closePath();
+                paint.strokeStyle=color;
+                paint.stroke();
+            } else if (type == 'drawStrokeRect') {
+                paint.strokeStyle = color;    //引用图像的颜色
+                paint.strokeRect(ox, oy, nx - ox, ny - oy);    //设置图画的大小
+            } else if (type == 'drawFillRect') {
+                paint.fillStyle = color;    //引用图像的颜色
+                paint.fillRect(ox, oy, nx - ox, ny - oy);    //设置图画的大小
+                paint.fillStyle="#000";
+            }else if(type=='drawStrokePoly'){
+                var ran=360/n;
+                let r=Math.sqrt(Math.pow(nx-ox,2)+Math.pow(ny-oy,2));
+                paint.beginPath();
+                for(var i=0;i<n;i++){
+                    paint.lineTo(ox+Math.cos((i*ran+45)*Math.PI/180)*r,oy+Math.sin((i*ran+45)*Math.PI/180)*r);
+                }
+                paint.closePath();
+                paint.strokeStyle=color;
+                paint.stroke();
+            }else if(type=='drawFillPoly'){
+                var ran=360/n;
+                let r=Math.sqrt(Math.pow(nx-ox,2)+Math.pow(ny-oy,2));
+                paint.beginPath();
+                for(var i=0;i<n;i++){
+                    paint.lineTo(ox+Math.cos((i*ran+45)*Math.PI/180)*r,oy+Math.sin((i*ran+45)*Math.PI/180)*r);
+                }
+                paint.closePath();
+                paint.fillStyle=color;
+                paint.fill();
+                paint.fillStyle="#000";
+            }else if(type=='drawLinearRect'){
+                let linear=paint.createLinearGradient(ox,oy,nx,oy);
+                linear.addColorStop(0,'red');
+                linear.addColorStop(0.2,'yellow');
+                linear.addColorStop(0.4,'blue');
+                linear.addColorStop(0.6,'green');
+                linear.addColorStop(0.8,'orange');
+                linear.addColorStop(1,'purple');
+                paint.fillStyle=linear;
+                paint.fillRect(ox,oy,nx-ox,ny-oy);
+                paint.fill();
+                paint.fillStyle="#000";
+            }else if(type=='drawFillCircle'){
+                let r=Math.sqrt(Math.pow(nx-ox,2)+Math.pow(ny-oy,2));
+                paint.beginPath();
+                paint.arc(ox,oy,r,0,2*Math.PI);
+                paint.fillStyle=color;
+                paint.fill();
+                paint.closePath()
+                paint.fillStyle="#000";
+            }else if(type=='drawStrokeCircle'){
+                let r=Math.sqrt(Math.pow(nx-ox,2)+Math.pow(ny-oy,2));
+                paint.beginPath();
+                paint.strokeStyle=color;
+                paint.arc(ox,oy,r,0,2*Math.PI);
+                paint.stroke();
+                paint.closePath()
+            }else if(type=='drawRadialCircle'){
+                let r=Math.sqrt(Math.pow(nx-ox,2)+Math.pow(ny-oy,2));
+                let radial=paint.createRadialGradient(ox,oy,0,ox,oy,r);
+                radial.addColorStop(0,'red');
+                radial.addColorStop(0.2,'yellow');
+                radial.addColorStop(0.4,'blue');
+                radial.addColorStop(0.6,'green');
+                radial.addColorStop(0.8,'orange');
+                radial.addColorStop(1,'purple');
+                paint.beginPath();
+                paint.arc(ox,oy,r,0,2*Math.PI);
+                paint.fillStyle=radial;
+                paint.fill();
+                paint.fillStyle="#000";
+            }
+            canvas.onmouseup = function (e) {     //鼠标离开事件
+                if(type=='drawFillText'){
+                    var str=prompt('请输入文字');
+                    paint.fillStyle=color;
+                    paint.font='50px 宋体';
+                    if(str){
+                        paint.fillText(str,ox,oy);
+                    }
+                }else if(type=='drawStrokeText'){
+                    var str=prompt('请输入文字');
+                    paint.strokeStyle=color;
+                    paint.font='50px 宋体';
+                    if(str){
+                        paint.strokeText(str,ox,oy);
+                    }
+                }
+                let img = paint.getImageData(0, 0, canvas.width, canvas.height);   //保存画好的图像
+                arr.push(img);
+                console.log(arr)
+                canvas.onmousemove = null;   //结束鼠标移动事件
+            }
+        }
+    }
+
+
+//    var canvas=document.querySelector('canvas');
+//    var paint=canvas.getContext('2d');     //启动绘画功能
+//     class  Draw{
+//         constructor(paint){
+//
+//         }
+//     }
+</script>
+</html>
